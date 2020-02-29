@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "zxc010613",
+      "name": "Plorence",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/29756197?v=4",
+      "profile": "http://plorence.kr/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "mcode-generator",
+  "projectOwner": "zxc010613",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
