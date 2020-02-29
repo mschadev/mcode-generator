@@ -50,9 +50,10 @@ docker run -it --rm -p 5000:5000 -e ASPNETCORE_URLS=http://+:5000 --name mcode-g
 [@zxc010613](https://github.com/zxc010613)
 
 ## Contributing
-No Restrictions. Open the Isue or Submit a PRS!  
+No Restrictions. Open the Issue or Submit a PRs!  
 
 ### Contributors
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):  
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -65,18 +66,6 @@ No Restrictions. Open the Isue or Submit a PRS!
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 ## License
 [MIT](./LICENSE)
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
