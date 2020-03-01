@@ -1,3 +1,3 @@
-*/*.cshtml linguist-vendored=false
-*/*.cshtml linguist-language=C#
+*.cshtml linguist-vendored=false
+*.cshtml linguist-language=C#
 wwwroot/lib/* linguist-vendored
