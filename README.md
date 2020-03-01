@@ -10,6 +10,9 @@ Online machine code(MCode) generator for autohotkey
 - [Install](#Install)
     - [dependencies](#dependencies)
 - [Usage](#Usage)
+  - [Required Environment Variables](#Required-Environment-Variables)
+  - [Native](#Native)
+  - [Docker](#Docker)
 - [Maintainer](#Maintainer)
 - [Contributing](#Contributing)
     - [Contributors](#Contributors)
@@ -31,7 +34,7 @@ If __Docker__ Environment
 git clone https://github.com/zxc010613/mcode-generator.git
 ```
 ## Usage
-### Environment Variables
+### Required Environment Variables
 |Name|Description|
 -----|-----------|
 |PUBLISHER_NAME|Name of publisher|
