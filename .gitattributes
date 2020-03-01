@@ -1,2 +1,2 @@
+*/*.cshtml linguist-language=csharp
 wwwroot/lib/* linguist-vendored
-*/*.cshtml linguist-language=C#
