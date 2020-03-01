@@ -9,7 +9,6 @@ EXPOSE 80
 ENV PUBLISHER_NAME=Plorence
 ENV PUBLISHER_EMAIL=ploseok@gmail.com
 ENV GITUSER_URL=https://github.com/zxc010613
-ENV REPOSITORY_URL=https://github.com/zxc010613/mcode-generator
 
 RUN apt-get update \ 
 	&& apt-get install -y gcc \
