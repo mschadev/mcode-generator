@@ -31,7 +31,12 @@ If __Docker__ Environment
 git clone https://github.com/zxc010613/mcode-generator.git
 ```
 ## Usage
-
+### Environment Variables
+|Name|Description|
+-----|-----------|
+|PUBLISHER_NAME|Name of publisher|
+|PUBLISHER_EMAIL|Email of publisher|
+|GITUSER_URL|Your Git Profile URL|
 ### Native
 ```bash
 cd mcode-generator
