@@ -1,0 +1,8 @@
+﻿.code-badge {
+    background: transparent !important;
+    border-radius: 0 0 0 0px !important;
+}
+.code-badge-language {
+    font-weight:normal !important;
+    color: white !important;
+}

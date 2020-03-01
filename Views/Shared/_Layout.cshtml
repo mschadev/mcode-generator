@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="Keywords" content="MCode Generator,Mcode,Autohotkey,Autohotkey Mcode,DllCall" />
+    <meta name="Description" content="Online MCode Generator for AHK" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Subject" content="Online MCode Generator for AHK" />
+    <meta http-equiv="Title" content="MCode Generator" />
+    <meta http-equiv="Author" content="Plorence" />
+    <meta http-equiv="Publisher" content="@Defines.PUBLISHER_NAME" />
+    <meta http-equiv="Other Agent" content="Plorence" />
+    <meta http-equiv="Reply-To" content="@Defines.PUBLISHER_EMAIL" />
+    <meta http-equiv="Email" content="@Defines.PUBLISHER_EMAIL" />
+
+    <meta property="og:title" content="MCode Generator" />
+    <meta property="og:description" content="Online MCode Generator for AHK" />
+    <meta property="og:image" content="http://mcode-generator.com/images/logo.png" />
+    <meta property="og:url" content="http://mcode-generator.com/" />
+    <meta property="og:type" content="website" />
+
+    <title>@ViewData["Title"] - MCode Generator</title>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bulma-0.8.0/bulma.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/lib/bulma-0.8.0/bulma.min.css" />
+        <link rel="stylesheet" href="~/css/site.min.css" />
+    </environment>
+    @RenderSection("Css", false)
+</head>
+<body class="background-color has-text-white">
+    <section class="hero">
+        <div class="columns is-centered">
+            <div class="column is-four-fifths">
+                <nav class="navbar is-transparent">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" asp-action="Index" asp-controller="Home">
+                            <span>MCode Generator</span>
+                        </a>
+
+                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarData">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <div id="navbarData" class="navbar-menu background-color has-text-grey-dark">
+                        <div class="navbar-start">
+                            <a asp-action="Docs" asp-controller="Home" class="navbar-item">
+                                Docs
+                            </a>
+                            <a target="_blank" href="https://github.com/zxc010613/mcode-generator" class="navbar-item">
+                                Github
+                            </a>
+
+                        </div>
+
+                        <div class="navbar-end">
+                            <!-- navbar items -->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <main>
+        @RenderBody()
+    </main>
+    <hr style="  background-color: #424242;
+  border: none;
+  display: block;
+  height: 1px;
+  margin-top:1.5rem;
+  margin-bottom:0px;" />
+    <footer class="footer background-color">
+        <div class="content has-text-centered">
+            <p>
+                MCode Generator by <a target="_blank" href="@Defines.GITUSER_URL">Plorence</a>. The source code is licensed
+                <a target="_blank" href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
+            <p>
+                VB.0.1.0
+            </p>
+            <p>
+                FeedBack:<a href="mailto:@Html.Raw(Defines.PUBLISHER_EMAIL)">ploseok@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery-3.4.1/jquery.min.js"></script>
+    <environment include="Development">
+        <script src="~/js/site.js"></script>
+        <script src="~/js/gtag.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/site.min.js"></script>
+        <script src="~/js/gtag.min.js"></script>
+    </environment>
+
+    @RenderSection("Scripts", false)
+</body>
+</html>

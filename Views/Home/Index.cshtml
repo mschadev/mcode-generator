@@ -1,0 +1,185 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+@section Css
+{
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/index.css" />
+        <link rel="stylesheet" href="~/lib/highlight.js/vs2015.css" />
+        <link rel="stylesheet" href="~/lib/highlightjs-badge/highlightjs-badge.css" />
+        <link rel="stylesheet" href="~/lib/fontawesome-free-5.12.1/all.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/css/index.min.css" />
+        <link rel="stylesheet" href="~/lib/highlight.js/vs2015.min.css" />
+        <link rel="stylesheet" href="~/lib/highlightjs-badge/highlightjs-badge.min.css" />
+        <link rel="stylesheet" href="~/lib/fontawesome-free-5.12.1/all.min.css" />
+    </environment>
+
+}
+<section class="section">
+    <div class="columns">
+        <div class="column is-one-third is-offset-one-third">
+            <div class="notification is-warning has-text-black">
+                This is beta version.
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="hero">
+        <div class="has-text-centered">
+            <span class="title">What is MCode?</span>
+        </div>
+        <div class="has-text-centered">
+            <blockquote>
+                <span class="subtitle">
+                    "MCode is short for machine code. Basically, it is compiled code" -
+                    <a href="https://github.com/joedf/MCode4GCC#what-is-mcode">joedf</a>
+                </span>
+            </blockquote>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="hero">
+        <div class="has-text-centered">
+            <span class="title">Features</span>
+        </div>
+        <div class="columns has-text-centered has-text-light">
+            <div class="column is-4 is-offset-2">
+                <ul>
+                    <li>Using GCC</li>
+                    <li>Use Bentschi Style</li>
+                    <li>Create easy-to-see MCODE</li>
+                </ul>
+            </div>
+            <div class="column is-4">
+                <ul>
+                    <li>Select X86 or X64 to support compilation</li>
+                    <li>Code Copy Button Support</li>
+                    <li>Create example script</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+            <div class="has-text-centered">
+                <span class="title">C Code Input</span>
+            </div>
+            <form asp-controller="Home" asp-action="Index" method="post">
+                <div class="field">
+                    <div class="control">
+                        <textarea asp-for="Generator.Code" class="textarea prism-live" rows="15" placeholder="int Function() {
+     return 100;
+}"></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label class="radio">
+                            <input asp-for="@Model.Generator.SelectedPlatform" type="radio" value="IsX86" checked>
+                            X86
+                        </label>
+                        <label class="radio">
+                            <input asp-for="@Model.Generator.SelectedPlatform" type="radio" value="IsX64">
+                            X64
+                        </label>
+                    </div>
+                    <p class="help">if autohotkey version is ANSI32 or Unicode32, select X86</p>
+                </div>
+                <span asp-validation-for="Generator.Code" class="has-text-danger"></span>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <input type="submit" value="Compile" class="button is-link" />
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="section">
+
+    <div class="hero">
+        <div class="has-text-centered">
+            <span class="title is-block">Result</span>
+            @if (!Model.Compiled)
+            {
+                <span class="subtitle">Not compiled</span>
+            }
+        </div>
+    </div>
+    @if (Model.Compiled)
+    {
+        <div class="container" id="result">
+            <div class="columns">
+                <div class="column is-5 is-offset-1">
+                    <pre><code class="bash">@Model.ConsoleOuput</code></pre>
+                </div>
+                <div class="column is-5">
+                    <pre><code class="autohotkey">@Model.Output</code></pre>
+
+                </div>
+            </div>
+        </div>
+    }
+</section>
+<section class="section">
+    <div class="hero">
+        <div class="has-text-centered">
+            <span class="title is-block">Github?</span>
+            <p>
+                Github repository created! <a target="_blank" href="https://github.com/zxc010613/mcode-generator">Here</a>
+            </p>
+            @*<p>
+                Uploading this project to the github is pending. <br />
+                Whether to open-source at the point of service is an important question.<br />
+                I will let you know on the homepage when I upload to Github.
+            </p>*@
+        </div>
+    </div>
+</section>
+@section Scripts
+{
+    <environment include="Development">
+        <script src="/lib/highlight.js/highlight.pack.js"></script>
+        <script src="~/lib/highlightjs-badge/highlightjs-badge.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="/lib/highlight.js/highlight.pack.min.js"></script>
+        <script src="~/lib/highlightjs-badge/highlightjs-badge.min.js"></script>
+    </environment>
+    <script>
+        setTimeout(function () {
+            var pres = document.querySelectorAll("pre>code");
+            for (var i = 0; i < pres.length; i++) {
+                hljs.highlightBlock(pres[i]);
+            }
+            var options = {
+                contentSelector: "#ArticleBody",
+                // Delay in ms used for `setTimeout` before badging is applied
+                // Use if you need to time highlighting and badge application
+                // since the badges need to be applied afterwards.
+                // 0 - direct execution (ie. you handle timing
+                loadDelay: 0,
+
+                // CSS class(es) used to render the copy icon.
+                copyIconClass: "fa fa-copy",
+                // CSS class(es) used to render the done icon.
+                checkIconClass: "fa fa-check text-success"
+            };
+            window.highlightJsBadge(options);
+        }, 10);
+    </script>
+    @if (Model.Compiled)
+    {
+        <script>
+        document.getElementById('result').scrollIntoView();
+        </script>
+    }
+}

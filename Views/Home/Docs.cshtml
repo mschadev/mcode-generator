@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Docs";
+}
+@section Css
+{
+
+    <environment include="Development">
+        <link rel="stylesheet" href="/css/docs.css" />
+        <link rel="stylesheet" href="~/lib/highlight.js/vs2015.css" />
+        <link rel="stylesheet" href="~/lib/highlightjs-badge/highlightjs-badge.css" />
+        <link rel="stylesheet" href="~/lib/fontawesome-free-5.12.1/all.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="/css/docs.min.css" />
+        <link rel="stylesheet" href="~/lib/highlight.js/vs2015.min.css" />
+        <link rel="stylesheet" href="~/lib/highlightjs-badge/highlightjs-badge.min.css" />
+        <link rel="stylesheet" href="~/lib/fontawesome-free-5.12.1/all.min.css" />
+    </environment>
+}
+<div class="columns">
+    <div class="column is-8 is-offset-2">
+        <section class="section">
+            <div class="hero">
+                <div class="has-text-centered">
+                    <span id="common-issues" class="title is-block">Common Issue</span>
+                    <span class="subtitle is-block">If the content is printed out</span>
+                    <pre><code class="bash">#Output
+
+    #ErrorOutput
+    /usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib32/Scrt1.o: In function `_start':
+    (.text+0x28): undefined reference to `main'
+    collect2: error: ld returned 1 exit status
+</code></pre>
+                </div>
+                <span>It means there is no syntax error.</span>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <environment include="Development">
+        <script src="/lib/highlight.js/highlight.pack.js"></script>
+        <script src="~/lib/highlightjs-badge/highlightjs-badge.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="/lib/highlight.js/highlight.pack.min.js"></script>
+        <script src="~/lib/highlightjs-badge/highlightjs-badge.min.js"></script>
+    </environment>
+
+    <script>
+        setTimeout(function () {
+            var pres = document.querySelectorAll("pre>code");
+            for (var i = 0; i < pres.length; i++) {
+                hljs.highlightBlock(pres[i]);
+            }
+            var options = {
+                contentSelector: "#ArticleBody",
+                // Delay in ms used for `setTimeout` before badging is applied
+                // Use if you need to time highlighting and badge application
+                // since the badges need to be applied afterwards.
+                // 0 - direct execution (ie. you handle timing
+                loadDelay: 0,
+
+                // CSS class(es) used to render the copy icon.
+                copyIconClass: "fa fa-copy",
+                // CSS class(es) used to render the done icon.
+                checkIconClass: "fa fa-check text-success"
+            };
+            window.highlightJsBadge(options);
+        }, 10);
+    </script>
+}

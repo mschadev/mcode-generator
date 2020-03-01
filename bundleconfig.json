@@ -1,0 +1,94 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/index.min.css",
+    "inputFiles": [
+      "wwwroot/css/index.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/docs.min.css",
+    "inputFiles": [
+      "wwwroot/css/docs.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bulma-0.8.0/bulma.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bulma-0.8.0/bulma.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bulma-0.8.0/bulma.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bulma-0.8.0/bulma.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/fontawesome-free-5.12.1/all.min.css",
+    "inputFiles": [
+      "wwwroot/lib/fontawesome-free-5.12.1/all.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/highlight.js/vs2015.min.css",
+    "inputFiles": [
+      "wwwroot/lib/highlight.js/vs2015.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/highlight.js/highlight.pack.min.js",
+    "inputFiles": [
+      "wwwroot/lib/highlight.js/highlight.pack.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/lib/highlightjs-badge/highlightjs-badge.min.css",
+    "inputFiles": [
+      "wwwroot/lib/highlightjs-badge/highlightjs-badge.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/highlightjs-badge/highlightjs-badge.min.js",
+    "inputFiles": [
+      "wwwroot/lib/highlightjs-badge/highlightjs-badge.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/gtag.min.js",
+    "inputFiles": [
+      "wwwroot/js/gtag.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]
