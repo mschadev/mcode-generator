@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+publish.ps1
+
+#google analytics
+wwwroot/js/gtag.js
+wwwroot/js/gtag.min.js
+
 # User-specific files
 *.rsuser
 *.suo
