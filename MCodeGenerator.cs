@@ -106,17 +106,17 @@ namespace mcode_generator
                 result += "return\n";
                 result += "BentschiMCode(mcode)\n" +
                     "{\n" +
-                    "  static e := {1:4, 2:1}, c := (A_PtrSize=8) ? \"x64\" : \"x86\"\n" +
-                    "  if (!regexmatch(mcode, \" ^ ([0 - 9] +),(\" c \":|.*?,\" c \":)([^,] +)\", m))\n" +
+                    @"  static e := {1:4, 2:1}, c := (A_PtrSize=8) ? ""x64"" : ""x86""" + "\n" +
+                    @"  if (!regexmatch(mcode, ""^([0-9]+),("" c "":|.*?,"" c "":)([^,]+)"", m))" + "\n" +
                     "    return\n" +
-                    "  if (!DllCall(\"crypt32\\CryptStringToBinary\", \"str\", m3, \"uint\", 0, \"uint\", e[m1], \"ptr\", 0, \"uint*\", s, \"ptr\", 0, \"ptr\", 0))\n" +
+                    @"  if (!DllCall(""crypt32\CryptStringToBinary"", ""str"", m3, ""uint"", 0, ""uint"", e[m1], ""ptr"", 0, ""uint*"", s, ""ptr"", 0, ""ptr"", 0))" + "\n" +
                     "    return\n" +
-                    "  p := DllCall(\"GlobalAlloc\", \"uint\", 0, \"ptr\", s, \"ptr\")\n" +
-                    "  if (c=\"x64\")\n" +
-                    "    DllCall(\"VirtualProtect\", \"ptr\", p, \"ptr\", s, \"uint\", 0x40, \"uint*\", op)\n" +
-                    "  if (DllCall(\"crypt32\\CryptStringToBinary\", \"str\", m3, \"uint\", 0, \"uint\", e[m1], \"ptr\", p, \"uint*\", s, \"ptr\", 0, \"ptr\", 0))\n" +
+                    @"  p := DllCall(""GlobalAlloc"", ""uint"", 0, ""ptr"", s, ""ptr"")" + "\n" +
+                    @"  if (c=""x64"")" + "\n" +
+                    @"    DllCall(""VirtualProtect"", ""ptr"", p, ""ptr"", s, ""uint"", 0x40, ""uint*"", op)" + "\n" +
+                    @"  if (DllCall(""crypt32\CryptStringToBinary"", ""str"", m3, ""uint"", 0, ""uint"", e[m1], ""ptr"", p, ""uint*"", s, ""ptr"", 0, ""ptr"", 0))" + "\n" +
                     "    return p\n" +
-                    "  DllCall(\"GlobalFree\", \"ptr\", p)\n" +
+                    @"  DllCall(""GlobalFree"", ""ptr"", p)" + "\n" +
                     "}";
                 _Output = result;
             }
