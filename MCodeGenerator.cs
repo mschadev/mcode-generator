@@ -73,7 +73,14 @@ namespace mcode_generator
             p.ErrorDataReceived += new DataReceivedEventHandler((sender, e) =>
             { errorOutput += e.Data + "\n"; });
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) {
-                p.StartInfo.FileName = "gcc";
+                if (_Options._IsX64)
+                {
+                    p.StartInfo.FileName = "x86_64-w64-mingw32-gcc";
+                }
+                else if (_Options._IsX86)
+                {
+                    p.StartInfo.FileName = "i686-w64-mingw32-gcc";
+                }
             }
             else if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
