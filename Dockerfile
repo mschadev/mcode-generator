@@ -11,8 +11,7 @@ ENV PUBLISHER_EMAIL=ploseok@gmail.com
 ENV GITUSER_URL=https://github.com/zxc010613
 
 RUN apt-get update \ 
-	&& apt-get install -y gcc \
-	&& apt-get install -y gcc-multilib
+	&& apt-get install -y mingw-w64
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.1-stretch AS build
 WORKDIR /src
