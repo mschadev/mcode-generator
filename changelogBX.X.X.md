@@ -4,5 +4,5 @@
 ```autohotkey
 if (!regexmatch(mcode, " ^ ([0 - 9] +),(" c ":|.*?," c ":)([^,] +)", m))
 ```
-There was a __space__ in the script created.
+There was a __space__ in the script created.  
 This prevents the BentschiMCode function from operating normally.
