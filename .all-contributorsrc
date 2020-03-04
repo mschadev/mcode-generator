@@ -13,6 +13,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "joedf",
+      "name": "Joe DF",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3848219?v=4",
+      "profile": "https://joedf.ahkscript.org",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
