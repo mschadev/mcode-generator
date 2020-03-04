@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#docker image file
+*.img
+
 publish.ps1
 
 #google analytics
