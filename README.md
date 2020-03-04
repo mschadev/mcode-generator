@@ -1,6 +1,6 @@
 # mcode-generator
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![](https://img.shields.io/badge/readme%20style-standard-green)](https://github.com/RichardLitt/standard-readme)
 ![](https://img.shields.io/github/repo-size/zxc010613/mcode-generator)  
@@ -69,6 +69,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://plorence.kr/"><img src="https://avatars3.githubusercontent.com/u/29756197?v=4" width="100px;" alt=""/><br /><sub><b>Plorence</b></sub></a><br /><a href="https://github.com/zxc010613/mcode-generator/commits?author=zxc010613" title="Code">💻</a></td>
+    <td align="center"><a href="https://joedf.ahkscript.org"><img src="https://avatars2.githubusercontent.com/u/3848219?v=4" width="100px;" alt=""/><br /><sub><b>Joe DF</b></sub></a><br /><a href="https://github.com/zxc010613/mcode-generator/commits?author=joedf" title="Code">💻</a></td>
   </tr>
 </table>
 
