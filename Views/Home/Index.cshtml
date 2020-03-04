@@ -74,7 +74,7 @@
             <form asp-controller="Home" asp-action="Index" method="post">
                 <div class="field">
                     <div class="control">
-                        <textarea asp-for="Generator.Code" class="textarea prism-live" rows="15" placeholder="int Function() {
+                        <textarea asp-for="@Model.Generator.Code" class="textarea prism-live" rows="15" placeholder="int Function() {
      return 100;
 }"></textarea>
                     </div>
@@ -92,11 +92,10 @@
                     </div>
                     <p class="help">if autohotkey version is ANSI32 or Unicode32, select X86</p>
                 </div>
-                <span asp-validation-for="Generator.Code" class="has-text-danger"></span>
+                <span asp-validation-for="@Model.Generator.Code" class="has-text-danger"></span>
                 <div class="field is-grouped">
                     <div class="control">
                         <input type="submit" value="Compile" class="button is-link" />
-
                     </div>
                 </div>
             </form>
