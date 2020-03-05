@@ -34,6 +34,7 @@ namespace mcode_generator.Controllers
             }
             
             MCodeGeneratorOptions options = new MCodeGeneratorOptions();
+            options.OptimizationLevel = model.Generator.SelectedOptimizationLevel;
             options._IsX64 = (model.Generator.SelectedPlatform.Equals("IsX64") ? true : false);
             options._IsX86 = !options._IsX64;
             MCodeGenerator mcodeGenerator =new MCodeGenerator(model.Generator.Code,options);

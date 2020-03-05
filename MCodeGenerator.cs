@@ -87,7 +87,7 @@ namespace mcode_generator
             {
                 p.StartInfo.FileName = @"C:\TDM-GCC-64\bin\gcc.exe";
             }
-            p.StartInfo.Arguments = $"-g0 {(_Options._IsX86 ? "-m32" : "-m64")} -Wa,-aln=\"{_ResultFilePath}\" \"{_TempCodeFilePath}\"";
+            p.StartInfo.Arguments = $"-g0 -{_Options.OptimizationLevel} {(_Options._IsX86 ? "-m32" : "-m64")} -Wa,-aln=\"{_ResultFilePath}\" \"{_TempCodeFilePath}\"";
             p.Start();
             p.BeginErrorReadLine();
             string output = p.StandardOutput.ReadToEnd();
