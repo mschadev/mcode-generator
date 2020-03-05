@@ -12,6 +12,8 @@ namespace mcode_generator.Models
         [Required]
         public string Code { get; set; }
         public string SelectedPlatform { get; set; }
-       
+
+        public string SelectedOptimizationLevel { get; set; }
+
     }
 }
