@@ -90,7 +90,36 @@
                             X64
                         </label>
                     </div>
-                    <p class="help">if autohotkey version is ANSI32 or Unicode32, select X86</p>
+                    <p class="help">If autohotkey version is ANSI32 or Unicode32, select X86</p>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label class="radio">
+                            <input asp-for="@Model.Generator.SelectedOptimizationLevel" type="radio" value="O0" checked>
+                            -O0(Default)
+                        </label>
+                        <label class="radio">
+                            <input asp-for="@Model.Generator.SelectedOptimizationLevel" type="radio" value="O1">
+                            -O1(-O)
+                        </label>
+                        <label class="radio">
+                            <input asp-for="@Model.Generator.SelectedOptimizationLevel" type="radio" value="O2">
+                            -O2
+                        </label>
+                        <label class="radio">
+                            <input asp-for="@Model.Generator.SelectedOptimizationLevel" type="radio" value="O3">
+                            -O3
+                        </label>
+                        <label class="radio">
+                            <input asp-for="@Model.Generator.SelectedOptimizationLevel" type="radio" value="Os">
+                            -Os
+                        </label>
+                        <label class="radio">
+                            <input asp-for="@Model.Generator.SelectedOptimizationLevel" type="radio" value="Ofast">
+                            -Ofast
+                        </label>
+                    </div>
+                    <p class="help">Optimization Level Documentation <a href="./Home/Docs/#optimization-level">Here</a></p>
                 </div>
                 <span asp-validation-for="@Model.Generator.Code" class="has-text-danger"></span>
                 <div class="field is-grouped">
@@ -136,10 +165,10 @@
                 Github repository created! <a target="_blank" href="https://github.com/zxc010613/mcode-generator">Here</a>
             </p>
             @*<p>
-                Uploading this project to the github is pending. <br />
-                Whether to open-source at the point of service is an important question.<br />
-                I will let you know on the homepage when I upload to Github.
-            </p>*@
+                    Uploading this project to the github is pending. <br />
+                    Whether to open-source at the point of service is an important question.<br />
+                    I will let you know on the homepage when I upload to Github.
+                </p>*@
         </div>
     </div>
 </section>
