@@ -14,6 +14,7 @@ namespace mcode_generator
     {
         public bool _IsX86 { get; set; }
         public bool _IsX64 { get; set; }
+        public string OptimizationLevel { get; set; }
     }
     public class MCodeGenerator : IDisposable
     {
