@@ -35,6 +35,80 @@
                 <span>It means there is no syntax error.</span>
             </div>
         </section>
+        <section class="section">
+            <div class="container">
+                <div class="has-text-centered">
+                    <h2 id="common-issues" class="title is-2 is-block">Compiler Options</h2>
+                    <span class="subtitle is-block">Optimization Level</span>
+                </div>
+                <div class="table-container">
+                    <table class="table is-fullwidth is-narrow is-bordered">
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Optimization Level</th>
+                                <th>Execution Time</th>
+                                <th>Code Size</th>
+                                <th>Memory Usage</th>
+                                <th>Compile Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>-O0</th>
+                                <td>optimization for compilation time (default)</td>
+                                <td>+</td>
+                                <td>+</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>-O1(O)</th>
+                                <td>optimization for code size and execution time</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>+</td>
+                                <td>+</td>
+                            </tr>
+                            <tr>
+                                <th>-O2</th>
+                                <td>optimization more for code size and execution time</td>
+                                <td>--</td>
+                                <td></td>
+                                <td>+</td>
+                                <td>++</td>
+                            </tr>
+                            <tr>
+                                <th>-O3</th>
+                                <td>optimization more for code size and execution time</td>
+                                <td>---</td>
+                                <td></td>
+                                <td>+</td>
+                                <td>+++</td>
+                            </tr>
+                            <tr>
+                                <th>-Os</th>
+                                <td>optimization for code size</td>
+                                <td></td>
+                                <td>--</td>
+                                <td></td>
+                                <td>++</td>
+                            </tr>
+                            <tr>
+                                <th>-Ofast</th>
+                                <td>O3 with fast none accurate math calculations</td>
+                                <td>---</td>
+                                <td></td>
+                                <td>+</td>
+                                <td>+++</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>+increase ++increase more +++increase even more -reduce --reduce more ---reduce even more</p>
+                    <p>Origin <a href="https://www.rapidtables.com/code/linux/gcc/gcc-o.html">here</a>, GCC online docs <a href="https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html">here</a></p>
+                </div>
+            </div>
+        </section>
     </div>
 </div>
 
