@@ -1,4 +1,7 @@
-﻿## B.0.1.1
+﻿## B0.1.2
+- Optimization Level Options Support
+
+## B0.1.1
 - Change from gcc to mingw-w64(gcc is for `linux`)  
 - Example script regular expression bug fix
 ```autohotkey
