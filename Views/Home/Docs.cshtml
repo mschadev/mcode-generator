@@ -26,10 +26,10 @@
                     <span class="subtitle is-block">If the content is printed out</span>
                     <pre><code class="bash">#Output
 
-    #ErrorOutput
-    /usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib32/Scrt1.o: In function `_start':
-    (.text+0x28): undefined reference to `main'
-    collect2: error: ld returned 1 exit status
+#ErrorOutput
+/usr/lib/gcc/i686-w64-mingw32/6.3-win32/../../../../i686-w64-mingw32/lib/../lib/libmingw32.a(lib32_libmingw32_a-crt0_c.o): In function `main':
+./mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain@16'
+collect2: error: ld returned 1 exit status
 </code></pre>
                 </div>
                 <span>It means there is no syntax error.</span>
