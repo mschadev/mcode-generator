@@ -19,10 +19,6 @@ namespace mcode_generator.Controllers
             
             return View(viewModel);
         }
-        public IActionResult Docs()
-        {
-            return View();
-        }
        
         [HttpPost]
         [ValidateAntiForgeryToken]
