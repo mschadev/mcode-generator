@@ -5,7 +5,8 @@
 [![](https://img.shields.io/badge/readme%20style-standard-green)](https://github.com/RichardLitt/standard-readme)
 ![](https://img.shields.io/github/repo-size/zxc010613/mcode-generator)  
 Online machine code(MCode) generator for autohotkey
-
+## Notice
+Domain([mcode-generator.com](http://mcode-generator.com/) has expired, so online services are no longer available.
 ## Table-of Contents
 - [Install](#Install)
     - [dependencies](#dependencies)
